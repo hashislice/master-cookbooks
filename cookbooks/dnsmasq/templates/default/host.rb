@@ -1,0 +1,4 @@
+# Host file managed by Chef
+
+127.0.0.1   localhost
+{{ ansible_default_ipv4.address }}	{{ ansible_hostname }}	{{ ansible_nodename }}
