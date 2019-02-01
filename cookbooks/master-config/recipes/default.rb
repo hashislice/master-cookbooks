@@ -10,9 +10,6 @@ package 'nginx' do
   action :install
 end
 
-search(:data_bag_name, 'servers:*',
-  :filter_result => { 'ip' => [ 'ip' ]
-                    }
-      ).each do |result|
+search(:servers, "id:rpi*").each do |result|
   puts result['ip']
 end
